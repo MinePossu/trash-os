@@ -25,7 +25,7 @@ clear
 set/"info","Trash Os"/"uzer",0
 print/"Welcum to ",info,\n
 while/[1]
-	read/"Uzer input","uzer"
+	read/"Uzer input$","uzer"
 	if/["legal" == uzer]
 		print/"tRaSh Os",\n,"The bezt oberading zystem for SMC Combuter tezting!",\n
 		print/"copyright: miNepozzu 2o2o all rights in de trash bin",\n
