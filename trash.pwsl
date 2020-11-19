@@ -1,43 +1,12 @@
-define/"control"
-{
-	set/"ox",x/"oy",y
-	while/[ox == x] and [oy == y]
-		getkey/"keys"
-		getitem/"keys",1/"key"
-		if/[key == "up arrow"] and [y > 1]
-			calc/"y=y-1"
-		endif
-		if/[key == "down arrow"]
-			calc/"y=y+1"
-		endif
-		if/[key == "right arrow"]
-			calc/"x=x+1"
-		endif
-		if/[key == "left arrow"] and [x > 1]
-			calc/"x=x-1"
-		endif
-		if/[key == "enter"]
-			set/"x","quit"
-		endif
-	endloop
-}
 clear
-set/"info","Trash Os"/"uzer",0
-print/"Welcum to ",info,\n
+set/"info","Mini Os"/"input",""
+print/"Welcome to ",info,\n
 while/[1]
-	read/"Uzer input$","uzer"
-	if/["legal" == uzer]
-		print/"tRaSh Os",\n,"The bezt oberading zystem for SMC Combuter tezting!",\n
-		print/"copyright: miNepozzu 2o2o all rights in de trash bin",\n
-		print/"copyright shredded by adazem009",\n
-	elseif/["keiboardtezt" == uzer]
-		set/"x",0/"y",0/"key",""
-		while/[key != "enter"]
-			clear
-			print/"Tezting yur keiboard... prezz enter to cancel",\n
-			print/"x=",x,\n,"y=",y,\n
-			control
-		endloop
-		print/"Byie!",\n
+	read/"$","input"
+	//backwards compability added by setting variable uzer to input.
+	set/"uzer",input
+	if/["legal" == input]
+		print/info,\n,"The minimalist operating system for SMC Comtuter system!",\n
+		print/"Free to use (MIT License).",\n
 	endif
 endloop
